@@ -25,7 +25,7 @@ const METADATA_PROGRAM_ID = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
 
 const MEMO_ID = new PublicKey("MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr")
 
-const programIds = {
+export const programIds = {
   token: TOKEN_PROGRAM_ID,
   associatedToken: SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID,
   metadata: METADATA_PROGRAM_ID,
@@ -230,7 +230,7 @@ export const mintNFT = async function (
     )
 
     updateInstructions.push(
-      splToken.Token.createMintToInstruction(
+      splToken.createMintToInstruction(
         TOKEN_PROGRAM_ID,
         new PublicKey(mintKey),
         new PublicKey(recipientKey),
@@ -313,7 +313,7 @@ function createMint(
     signers
   )
   instructions.push(
-    splToken.Token.createInitMintInstruction(
+    splToken.createInitializeMintInstruction(
       TOKEN_PROGRAM_ID,
       account,
       decimals,
@@ -339,7 +339,7 @@ const createTokenAccount = (
     signers
   )
   instructions.push(
-    splToken.Token.createInitAccountInstruction(
+    splToken.createInitializeAccountInstruction(
       TOKEN_PROGRAM_ID,
       mint,
       account,
