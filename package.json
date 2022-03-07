@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@solana/buffer-layout": "^4.0.0",
     "@solana/spl-token": "^0.2.0",
     "@solana/web3.js": "^1.36.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "bn.js": "^5.2.0",
+    "borsh": "^0.7.0",
+    "bs58": "^5.0.0",
     "buffer-layout": "^1.2.2",
     "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
+    "dom-to-image": "^2.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -26,6 +32,9 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "browser": {
+    "crypto": false
   },
   "browserslist": {
     "production": [

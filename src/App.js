@@ -5,9 +5,11 @@ import { useEffect, useState } from "react"
 import nftImage from "./nftImage.png"
 import { Creator, dataURLtoFile, mintNFT } from "./utils/nftCreation"
 import domToImage from "dom-to-image"
-import { programIds } from "./utils/nftCreation"
 import { burn } from "./utils/nftBurn"
 
+const programIds = {
+  token: new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+}
 const NETWORK = web3.clusterApiUrl("devnet")
 const connection = new Connection(NETWORK)
 
